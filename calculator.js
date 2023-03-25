@@ -15,7 +15,10 @@ const fetchMaterials = async () => {
       'Authorization': `Bearer ${keyK2pb3S7oW78C5R}`
     }
   };
+console.log('API URL:', url);
 
+  
+  
   try {
     const response = await axios.get(url, config);
     const materials = response.data.records;
