@@ -23,14 +23,14 @@ console.log('API URL:', url);
     const response = await axios.get(url, config);
     const materials = response.data.records;
     materials.forEach(material => {
+          console.log('Fetched materials:', materials);
+
       const option = document.createElement('option');
       option.value = material.id;
       option.textContent = material.fields.Material;
       materialSelect.appendChild(option);
     });
-    
-    console.log('Fetched materials:', materials);
-
+   
     
   } catch (error) {
     console.error('Error fetching materials:', error);
