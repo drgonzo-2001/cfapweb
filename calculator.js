@@ -28,6 +28,10 @@ console.log('API URL:', url);
       option.textContent = material.fields.Material;
       materialSelect.appendChild(option);
     });
+    
+    console.log('Fetched materials:', materials);
+
+    
   } catch (error) {
     console.error('Error fetching materials:', error);
   }
